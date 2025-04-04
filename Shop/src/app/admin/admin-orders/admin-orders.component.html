@@ -1,0 +1,71 @@
+<div class="admin-orders-container">
+    <h1>Admin Orders</h1>
+  
+    <section>
+      <h2>Pending Orders</h2>
+      <div *ngIf="loadingPending">Loading pending orders...</div>
+      <div *ngIf="errorPending">Error: {{ errorPending }}</div>
+  
+      <table *ngIf="pendingOrders.length > 0">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of pendingOrders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.orderDate }}</td>
+            <td>{{ order.orderTotal | currency }}</td>
+            <td>{{ order.orderStatus }}</td>
+            <td>
+              <input type="date" [(ngModel)]="date">
+              <select [(ngModel)]="paymentMethod">
+                <option value="">Select Payment</option>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="DebitCard">Debit Card</option>
+              </select>
+              <button (click)="confirmOrder(order.id, date, paymentMethod)">Confirm</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p *ngIf="!loadingPending && !errorPending && pendingOrders.length === 0">No pending orders.</p>
+    </section>
+  
+    <section>
+      <h2>All Orders</h2>
+      <div *ngIf="loadingAll">Loading all orders...</div>
+      <div *ngIf="errorAll">Error: {{ errorAll }}</div>
+  
+      <table *ngIf="allOrders.length > 0">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of allOrders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.orderDate }}</td>
+            <td>{{ order.orderTotal | currency }}</td>
+            <td>{{ order.orderStatus }}</td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p *ngIf="!loadingAll && !errorAll && allOrders.length === 0">No orders.</p>
+    </section>
+  </div>

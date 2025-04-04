@@ -1,0 +1,29 @@
+<div class="profile-container">
+  <h1>User Profile</h1>
+
+  <div *ngIf="userProfile">
+    <p><strong>Username:</strong> {{ userProfile.username }}</p>
+    <p><strong>Email:</strong> {{ userProfile.email }}</p>
+    <p><strong>Phone:</strong> {{ userProfile.phone }}</p>
+  </div>
+
+  <div *ngIf="!userProfile && loading">
+    <p>Loading profile...</p>
+  </div>
+
+  <div *ngIf="!userProfile && error">
+    <p>Error loading profile: {{ error }}</p>
+  </div>
+
+  <div class="profile-actions" *ngIf="isAdminUser()">
+    <h2>Admin Actions</h2>
+    <button (click)="goToAdminDashboard()">Go to Admin Dashboard</button>
+    </div>
+
+  <div class="profile-actions" *ngIf="!isAdminUser()">
+    <h2>User Actions</h2>
+    <button (click)="goToCart()">Go to Cart</button>
+    <button (click)="goToOrders()">Go to Orders</button>
+    <button (click)="shopMore()">Shop More</button>
+  </div>
+</div>

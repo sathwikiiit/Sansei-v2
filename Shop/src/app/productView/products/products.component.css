@@ -1,0 +1,130 @@
+.products-container {
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Filters section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.filter-group select,
+.filter-group input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 200px; /* Adjust as needed */
+}
+
+/* No products message */
+.no-products {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+  color: #777;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-rows: auto auto auto; /* Attempting to define 3 rows */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Pagination section */
+.pagination-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.pagination-info {
+  color: #555;
+  font-size: 0.95em;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-button {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 1em;
+  margin: 0 5px;
+}
+
+.pagination-button:hover {
+  background-color: #e9ecef;
+}
+
+.pagination-button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+}
+
+.page-numbers .page-number {
+  min-width: 30px;
+  text-align: center;
+  margin: 0 3px;
+}
+
+.page-numbers .page-number.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-size-selector {
+  display: flex;
+  align-items: center;
+}
+
+.page-size-selector label {
+  margin-right: 10px;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.page-size-selector select.select-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}

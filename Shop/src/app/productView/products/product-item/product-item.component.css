@@ -1,0 +1,149 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  width: 450px; /* Adjusted width for side-by-side */
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.product-image {
+  width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.product-info .price {
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-info .category {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.product-info .description {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 5px;
+}
+
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.product-actions span {
+  font-size: 0.9em;
+}
+
+.product-actions .stock {
+  color: green;
+  font-weight: bold;
+}
+
+.product-actions .out-of-stock {
+  color: red;
+  font-weight: bold;
+}
+
+.product-actions .quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.product-actions .quantity-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #333;
+  font-size: 1em;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.product-actions .quantity-button:first-child {
+  margin-left: 0;
+}
+
+.product-actions .quantity-button:disabled {
+  background-color: #f9f9f9;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.product-actions .quantity-input {
+  width: 50px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.product-actions button.add-to-cart,
+.product-actions button.go-to-cart {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  width: auto;
+}
+
+.product-actions button.add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.product-actions button.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+.product-actions button.add-to-cart:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.product-actions button.go-to-cart {
+  background-color: #007bff;
+  color: white;
+}
+
+.product-actions button.go-to-cart:hover {
+  background-color: #0056b3;
+}

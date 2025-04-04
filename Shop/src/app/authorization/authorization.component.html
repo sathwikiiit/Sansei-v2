@@ -1,0 +1,41 @@
+<div class="auth-container">
+  <h2>{{ isLogin ? 'Login' : 'Register' }}</h2>
+
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+
+  <div *ngIf="!isLogin" class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email">
+  </div>
+
+  <div *ngIf="!isLogin" class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" [(ngModel)]="phone">
+  </div>
+
+  <div *ngIf="!isLogin" class="form-group">
+    <label for="currentAdress">Address:</label>
+    <input type="text" id="currentAdress" name="currentAdress" [(ngModel)]="currentAdress">
+  </div>
+
+  <button [disabled]="isLogin && (!username || !password) || (!isLogin && (!username || !password || !email))"
+          (click)="isLogin ? login() : register()">
+    {{ isLogin ? 'Login' : 'Register' }}
+  </button>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <p *ngIf="isLogin">
+    Don't have an account? <a (click)="toggleForm()">Register</a>
+  </p>
+  <p *ngIf="!isLogin">
+    Already have an account? <a (click)="toggleForm()">Login</a>
+  </p>
+</div>

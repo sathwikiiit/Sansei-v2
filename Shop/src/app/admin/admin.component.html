@@ -1,0 +1,35 @@
+<div class="admin-container">
+    <aside class="admin-sidebar">
+      <nav>
+        <ul>
+          <li>
+            <button (click)="navigateToProducts()">See Product List</button>
+          </li>
+          <li>
+            <button (click)="navigateToOrders()">Manage Orders</button>
+          </li>
+          <li>
+            <button (click)="navigateToUsers()">Manage Users</button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <main class="admin-content">
+      <h2>Add Products (JSON)</h2>
+      <div *ngIf="uploadSuccessMessage" class="alert alert-success">{{ uploadSuccessMessage }}</div>
+      <div *ngIf="uploadErrorMessage" class="alert alert-danger">{{ uploadErrorMessage }}</div>
+      <div class="json-upload-section">
+        <label for="jsonFile">Upload JSON File:</label>
+        <input type="file" id="jsonFile" accept=".json" (change)="handleFileInput($event)">
+      </div>
+      <div class="json-preview-section" *ngIf="jsonContent">
+        <h3>JSON Preview:</h3>
+        <pre>{{ jsonContent }}</pre>
+      </div>
+      <div class="submit-section" *ngIf="jsonContent">
+        <button (click)="submitJson()">Upload Products</button>
+      </div>
+      <router-outlet/>
+    </main>
+  </div>

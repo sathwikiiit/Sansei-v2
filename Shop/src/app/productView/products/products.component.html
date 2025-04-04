@@ -1,0 +1,50 @@
+<div class="products-container">
+    <div class="filters">
+      <div class="filter-group">
+        <label for="category">Category</label>
+        <select id="category" [(ngModel)]="selectedCategory" (change)="applyFilters()">
+          <option value="">All Categories</option>
+          <option *ngFor="let cat of availableCategories" [value]="cat">{{ cat }}</option>
+        </select>
+      </div>
+  
+      <div class="filter-group">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" [(ngModel)]="selectedTags" (input)="applyFilters()" placeholder="Enter tags">
+      </div>
+  
+      <div class="filter-group">
+        <label for="search">Search</label>
+        <input type="text" id="search" [(ngModel)]="searchString" (input)="applyFilters()" placeholder="Search products...">
+      </div>
+    </div>
+  
+    <div *ngIf="products.length === 0" class="no-products">
+      <p>No products found matching your criteria.</p>
+    </div>
+  
+    <div *ngIf="products.length > 0" class="product-grid">
+      <app-product-item *ngFor="let product of products" [product]="product"></app-product-item>
+    </div>
+  
+    <div *ngIf="totalProducts > 0" class="pagination-section">
+        <div class="pagination-info">
+            Showing {{ (currentPage) * pageSize + 1 }} - {{ endProductIndex }} of {{ totalProducts }} products
+        </div>
+        <div class="pagination-controls">
+        <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 0" class="pagination-button">Previous</button>
+        <div class="page-numbers">
+          <button *ngFor="let page of pages" (click)="onPageChange(page)" [ngClass]="{'active': page === currentPage}" class="pagination-button page-number">
+            {{ page }}
+          </button>
+        </div>
+        <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages-1" class="pagination-button">Next</button>
+      </div>
+      <div class="page-size-selector">
+        <label for="pageSize">Items per page:</label>
+        <select id="pageSize" [(ngModel)]="pageSize" (change)="onPageSizeChange(pageSize)" class="select-input">
+          <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+    </div>
+  </div>

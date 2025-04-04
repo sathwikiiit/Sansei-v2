@@ -1,0 +1,118 @@
+.admin-users-container {
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    margin-bottom: 15px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th,
+  .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .add-admin-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: calc(100% - 12px); /* Adjust for padding and border */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+  
+  .add-admin-form button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-admin-form button:first-child {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .add-admin-form button:first-child:hover {
+    background-color: #218838;
+  }
+  
+  .add-admin-form button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .add-admin-form button:last-child:hover {
+    background-color: #c82333;
+  }
+  
+  .alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  /* Existing CSS */
+
+.admin-users-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-users-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Existing CSS */

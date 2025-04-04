@@ -1,0 +1,90 @@
+.admin-orders-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .admin-orders-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  input[type="date"], select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  .loading-message, .error-message, .no-orders-message {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .loading-message {
+    background-color: #e0f7fa; /* Light blue */
+    color: #00838f;
+  }
+  
+  .error-message {
+    background-color: #ffcdd2; /* Light red */
+    color: #d32f2f;
+  }
+  
+  .no-orders-message {
+    background-color: #fff3e0; /* Light orange */
+    color: #e65100;
+  }

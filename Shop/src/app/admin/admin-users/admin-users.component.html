@@ -1,0 +1,57 @@
+<div class="admin-users-container">
+    <h2>Manage Admin Users</h2>
+  
+    <h3>Admin User List</h3>
+    <div *ngIf="loadingUsers">Loading admin users...</div>
+    <div *ngIf="usersError" class="alert alert-danger">{{ usersError }}</div>
+  
+    <table *ngIf="users.length > 0 && !loadingUsers" class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="users.length === 0 && !loadingUsers && !usersError">No admin users found.</div>
+  
+    <h3>Add New Admin User</h3>
+    <button (click)="openAddAdminForm()" *ngIf="!isAddingAdmin">Add Admin User</button>
+  
+    <div *ngIf="isAddingAdmin" class="add-admin-form">
+      <h4>Register New Admin</h4>
+      <div *ngIf="registrationSuccessMessage" class="alert alert-success">{{ registrationSuccessMessage }}</div>
+      <div *ngIf="registrationErrorMessage" class="alert alert-danger">{{ registrationErrorMessage }}</div>
+  
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="newUser.username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="newUser.email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" [(ngModel)]="newUser.phone" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
+      </div>
+  
+      <button (click)="registerAdmin()">Register Admin</button>
+      <button (click)="closeAddAdminForm()">Cancel</button>
+    </div>
+  </div>

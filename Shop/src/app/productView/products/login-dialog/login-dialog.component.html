@@ -1,0 +1,11 @@
+<div class="login-dialog-overlay">
+    <div class="login-dialog-content">
+        <h2>Login Required</h2>
+        <p>You need to be logged in to add items to your cart. Would you like to log in now?</p>
+        <div class="dialog-actions">
+            <button (click)="onNoClick()">Continue Browsing</button>
+            <button (click)="onLoginClick()">Go to Login</button>
+        </div>
+        <button class="close-button" (click)="onNoClick()">X</button>
+    </div>
+</div>

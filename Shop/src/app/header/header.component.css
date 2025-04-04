@@ -1,0 +1,72 @@
+.head {
+  background-color: blue;
+  height: 60px;
+  display: flex;
+  align-items: center; /* Vertically align items in the header */
+  padding: 0 20px; /* Increased padding for better spacing */
+  color: white;
+}
+
+h1 {
+  flex-grow: 1; /* Allows the title to take up remaining space, pushing auth/cart to the right */
+  background-color: blue;
+  margin: 0 20px; /* Increased margin for better spacing */
+  font-size: 1.8em; /* Slightly larger font size for the title */
+}
+
+#icon,
+#cart {
+  height: 40px;
+  padding: 5px;
+  display: block; /* Prevents extra space below the image */
+}
+
+.auth-links,
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.auth-links a,
+.user-actions a,
+.user-actions button {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px; /* Increased margin for better separation */
+  padding: 8px 15px; /* Slightly larger padding for better touch targets */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1em; /* Ensure consistent font size */
+}
+
+.user-actions button {
+  border: 1px solid white; /* Add a subtle border to the button */
+  border-radius: 5px; /* Add some rounding to the button */
+}
+
+.cart-section {
+  display: flex;
+  align-items: center;
+  margin-left: 25px; /* Increased spacing before the cart */
+}
+
+.item-count {
+  position: absolute; /* Changed to absolute for more precise positioning */
+  top: 5px; /* Adjust top position */
+  right: -5px; /* Adjust right position */
+  min-width: 20px; /* Use min-width to ensure it fits single digits */
+  height: 20px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px 4px; /* Add some padding to the count */
+  border-radius: 10px; /* Adjust border-radius for a more pill-like shape */
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 16px; /* Adjust line-height to vertically center text */
+}
+
+.cart-section {
+  position: relative; /* Needed for absolute positioning of item-count */
+}

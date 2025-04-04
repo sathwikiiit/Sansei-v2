@@ -1,0 +1,15 @@
+<div class="head">
+    <a [routerLink]="['/']"><img id="icon" src="store.png"></a>
+    <h1>{{title}}</h1>
+    <div class="auth-links" *ngIf="!isLoggedIn">
+      <a [routerLink]="['/login']">Login</a>
+    </div>
+    <div class="user-actions" *ngIf="isLoggedIn">
+      <a [routerLink]="['/profile']">Profile</a>
+      <button (click)="logout()">Logout</button>
+    </div>
+    <div class="cart-section">
+      <a [routerLink]="['/cart']"><img id="cart" src="cart.png"></a>
+      <p class="item-count" *ngIf="isLoggedIn && itemCount">{{itemCount}}</p>
+    </div>
+  </div>

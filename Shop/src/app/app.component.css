@@ -1,0 +1,17 @@
+h1, footer{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+.main{
+    overflow-y: scroll;
+    scrollbar-width: 10px;
+    max-height: 86%;
+}
+footer{
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+}

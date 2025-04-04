@@ -1,0 +1,38 @@
+<div class="order-details-container">
+    <h1>Order Details</h1>
+    <div *ngIf="loading" class="loading-message">Loading order details...</div>
+    <div *ngIf="error" class="error-message">Error: {{ error }}</div>
+  
+    <div *ngIf="!loading && !error && order!==null">
+      <div class="order-info">
+        <h2>Order Information</h2>
+        <p><strong>Order ID:</strong> {{ order.id }}</p>
+        <p><strong>Order Date:</strong> {{ order.orderDate}}</p>
+        <p><strong>Order Status:</strong> {{ order.orderStatus }}</p>
+        <p><strong>Delivery Date:</strong> {{order.deliveryDate}}</p>
+        <p><strong>Order Address:</strong> {{order.orderAddress}}</p>
+        <p><strong>Order Phone:</strong> {{order.orderPhone}}</p>
+        <p><strong>Total Amount:</strong> {{ order.orderTotal | currency }}</p>
+      </div>
+  
+      <div class="order-items">
+        <h2>Order Items</h2>
+        <ul class="order-items-list">
+          <li *ngFor="let item of order.orderItems">
+            <div class="item-details">
+              <p><strong>Product:</strong> {{ item.product.name }}</p>
+              <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+               <p><strong>Price:</strong> {{item.priceAtPurchase | currency}}</p>
+              </div>
+          </li>
+        </ul>
+      </div>
+       <div class="order-summary">
+          <h2>Order Summary</h2>
+          <p><strong>Total Items:</strong> {{ order.orderItems.length}}</p>
+          <p><strong>Subtotal:</strong> {{ order.orderTotal| currency }}</p>
+          <p><strong>Total(Including CGST & SGST):</strong> {{ order.orderTotal*1.18 | currency }}</p>
+        </div>
+    </div>
+  </div>
+  

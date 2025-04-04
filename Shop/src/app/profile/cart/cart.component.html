@@ -1,0 +1,57 @@
+<div class="cart-container">
+  <h1>Shopping Cart</h1>
+
+  <div *ngIf="cartItems.length === 0 && !loading">
+      <p>Your cart is empty.</p>
+      <button routerLink="/products">Shop Now</button>
+  </div>
+
+  <div *ngIf="loading">
+      <p>Loading cart...</p>
+  </div>
+  <div *ngIf="orderPlaced === true">
+    <p>Your order has been placed successfully!</p>
+  </div>
+  <div *ngIf="orderPlaced === false">
+    <p>Your order was not placed. Please try again.</p>
+  </div>
+
+
+  <div *ngIf="cartItems.length > 0 && !loading">
+      <table>
+          <thead>
+              <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of cartItems">
+                  <td>{{ item.product.name }}</td>
+                  <td>{{ item.product.price | currency:'INR' }}</td>
+                  <td>
+                      <button ariaLabel="Decrease quantity for {{ item.product.name }}" (click)="decreaseQuantity(item.product.id)">-</button>
+                      <input type="number" min="1" [value]="item.quantity" (change)="updateQuantity(item.product.id, $event)">
+                      <button ariaLabel="Increase quantity for {{ item.product.name }}" (click)="increaseQuantity(item.product.id)">+</button>
+                  </td>
+                  <td>{{ item.product.price * item.quantity | currency:'INR' }}</td>
+                  <td>
+                      <button ariaLabel="Remove {{ item.product.name }} from cart" (click)="removeFromCart(item.product.id)">Remove</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+      <div class="cart-summary">
+          <h3>Cart Total: {{ calculateCartTotal() | currency:'INR' }}</h3>
+          <button (click)="checkout()" [disabled]="cartItems.length === 0">Proceed to Checkout</button>
+      </div>
+  </div>
+
+  <div *ngIf="error">
+      <p>Error loading cart: {{ error }}</p>
+  </div>
+</div>

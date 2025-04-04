@@ -1,0 +1,122 @@
+[
+    {
+      "name": "Wireless Noise-Canceling Headphones",
+      "price": 249.99,
+      "description": "Premium over-ear headphones with advanced active noise cancellation to block out distractions. High-fidelity audio drivers deliver rich, detailed sound. Features Bluetooth 5.2 for stable connectivity and up to 30 hours of battery life. Includes a carrying case.",
+      "category": "Electronics",
+      "tags": "headphones, wireless, noise-canceling, audio, travel, bluetooth, premium",
+      "stock": 35
+    },
+    {
+      "name": "Men's Slim Fit Chino Pants",
+      "price": 59.95,
+      "description": "Classic slim-fit chino pants made from a comfortable and durable cotton blend. Versatile style suitable for both casual and semi-formal occasions. Available in multiple colors and waist sizes.",
+      "category": "Clothing",
+      "tags": "men's, pants, chino, slim fit, fashion, casual, formal",
+      "stock": 80
+    },
+    {
+      "name": "Ceramic Coffee Mug Set (4 pcs)",
+      "price": 24.50,
+      "description": "Set of four handcrafted ceramic coffee mugs with unique reactive glaze finishes. Each mug holds 12 oz of your favorite beverage. Microwave and dishwasher safe.",
+      "category": "Home & Kitchen",
+      "tags": "mugs, coffee, ceramic, kitchen, home decor, handmade",
+      "stock": 120
+    },
+    {
+      "name": "Portable Bluetooth Speaker",
+      "price": 79.00,
+      "description": "Compact and powerful Bluetooth speaker with IPX7 waterproof rating. Delivers rich, 360-degree sound and boasts a 15-hour battery life. Perfect for outdoor adventures.",
+      "category": "Electronics",
+      "tags": "speaker, bluetooth, portable, audio, waterproof, outdoor",
+      "stock": 50
+    },
+    {
+      "name": "Women's Floral Print Summer Dress",
+      "price": 45.00,
+      "description": "Lightweight and breezy summer dress with a vibrant floral print. Made from soft rayon fabric with an adjustable waist tie for a comfortable fit. Ideal for sunny days and casual outings.",
+      "category": "Clothing",
+      "tags": "women's, dress, floral, summer, fashion, casual, rayon",
+      "stock": 65
+    },
+    {
+      "name": "Stainless Steel Cookware Set (8 pcs)",
+      "price": 199.99,
+      "description": "High-quality stainless steel cookware set with impact-bonded bases for even heat distribution. Induction compatible and oven safe up to 500°F. Includes saucepans, frying pans, and a stockpot.",
+      "category": "Home & Kitchen",
+      "tags": "cookware, stainless steel, kitchen, cooking, induction, set",
+      "stock": 25
+    },
+    {
+      "name": "Leather Messenger Bag",
+      "price": 120.00,
+      "description": "Genuine leather messenger bag with multiple compartments and a padded laptop sleeve. Adjustable shoulder strap for comfortable carrying. Stylish and functional for work or travel.",
+      "category": "Accessories",
+      "tags": "leather, bag, messenger, travel, business, laptop",
+      "stock": 40
+    },
+    {
+      "name": "Smartwatch with GPS",
+      "price": 179.00,
+      "description": "Advanced smartwatch with built-in GPS, heart rate monitor, and sleep tracking. Receive notifications, control music, and track your workouts. Water-resistant and long-lasting battery.",
+      "category": "Electronics",
+      "tags": "smartwatch, watch, fitness, gps, health, wearable",
+      "stock": 20
+    },
+    {
+      "name": "Cotton Crew Neck T-Shirt (3-Pack)",
+      "price": 30.00,
+      "description": "Pack of three classic crew neck t-shirts made from soft and breathable 100% cotton. Essential for everyday wear. Available in various colors.",
+      "category": "Clothing",
+      "tags": "t-shirt, men's, women's, cotton, casual, basic, pack",
+      "stock": 150
+    },
+    {
+      "name": "Electric Kettle",
+      "price": 39.99,
+      "description": "Stainless steel electric kettle with rapid boil technology. Features automatic shut-off and boil-dry protection. Perfect for making tea, coffee, and other hot beverages.",
+      "category": "Home & Kitchen",
+      "tags": "kettle, electric, kitchen, appliances, tea, coffee",
+      "stock": 75
+    },
+    {
+      "name": "Running Shoes",
+      "price": 89.00,
+      "description": "Lightweight and breathable running shoes with responsive cushioning. Designed for comfort and performance on the road or track.",
+      "category": "Sports & Outdoors",
+      "tags": "shoes, running, sports, athletic, footwear",
+      "stock": 30
+    },
+    {
+      "name": "Denim Jacket",
+      "price": 69.50,
+      "description": "Classic denim jacket with a button-up front and adjustable cuffs. Timeless style that pairs well with any outfit.",
+      "category": "Clothing",
+      "tags": "jacket, denim, men's, women's, fashion, outerwear",
+      "stock": 55
+    },
+    {
+      "name": "Blender",
+      "price": 54.00,
+      "description": "High-performance blender with multiple speed settings. Perfect for making smoothies, soups, and sauces.",
+      "category": "Home & Kitchen",
+      "tags": "blender, kitchen, appliances, smoothie, food preparation",
+      "stock": 42
+    },
+    {
+      "name": "Camping Tent",
+      "price": 129.00,
+      "description": "Waterproof and durable camping tent for 4 people. Easy setup and spacious interior. Ideal for outdoor adventures.",
+      "category": "Sports & Outdoors",
+      "tags": "tent, camping, outdoor, gear, travel",
+      "stock": 18
+    },
+    {
+      "name": "Laptop Backpack",
+      "price": 49.00,
+      "description": "Durable and spacious backpack with a padded compartment for laptops up to 15.6 inches. Multiple pockets for organization. Comfortable for everyday use.",
+      "category": "Accessories",
+      "tags": "backpack, laptop, bag, travel, school, work",
+      "stock": 60
+    }
+  ]

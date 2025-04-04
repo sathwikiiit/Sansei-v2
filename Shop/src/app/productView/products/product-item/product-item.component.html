@@ -1,0 +1,53 @@
+<div class="product-card">
+  <div class="product-image">
+    <img src="PngItem.png" alt="{{ product.name }}">
+  </div>
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <p class="price">{{ product.price | currency:'INR' }}</p>
+    <p class="category">{{ product.category }}</p>
+    <p class="description">
+      {{ product.description.length > 100 ? product.description.substring(0, 100) + '...' : product.description }}
+    </p>
+    <div class="product-actions">
+      <span class="stock" *ngIf="product.stock > 0">In Stock</span>
+      <span class="out-of-stock" *ngIf="product.stock === 0">Out of Stock</span>
+
+      <div class="quantity-controls" *ngIf="isProductInCart(product) && product.stock > 0">
+        <button class="quantity-button" (click)="decreaseQuantity(product)" [disabled]="quantityInCart <= 0">
+          -
+        </button>
+        <input
+          type="number"
+          class="quantity-input"
+          [ngModel]="quantityInCart"
+          (ngModelChange)="updateQuantity(product, {$event: $event})"
+          min="0"
+          [max]="product.stock"
+        />
+        <button class="quantity-button" (click)="increaseQuantity(product)" [disabled]="quantityInCart >= product.stock">
+          +
+        </button>
+      </div>
+
+      <button
+        class="add-to-cart"
+        (click)="addToCart(product)"
+        [disabled]="product.stock === 0"
+        *ngIf="!isProductInCart(product)"
+      >
+        Add to Cart
+      </button>
+      <button
+        class="go-to-cart"
+        *ngIf="isProductInCart(product)"
+      >
+        Go to Cart
+      </button>
+    </div>
+  </div>
+  <app-login-dialog
+    (closed)="handleLoginDialogClose($event)"
+    *ngIf="showLoginDialog"
+  ></app-login-dialog>
+</div>

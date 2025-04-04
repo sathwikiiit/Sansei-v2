@@ -1,0 +1,10 @@
+<div class="orders-container">
+  <h1>Your Orders</h1>
+  <div *ngIf="orderCount !== undefined">
+    <p>You have placed {{ orderCount }} order(s).</p>
+  </div>
+  <div *ngIf="orderCount === 0">
+    <p>You have no orders yet.</p>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,67 @@
+<div class="admin-product-list-container">
+  <h2>Product List</h2>
+
+  <div *ngIf="loading">Loading products...</div>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <table *ngIf="products.length > 0 && !loading" class="product-table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Tags</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of products">
+              <td>{{ product.id }}</td>
+              <td *ngIf="productToBeEdited !== product.id">
+                  {{ product.name }}
+              </td>
+              <td *ngIf="productToBeEdited === product.id">
+                  <input type="text" [(ngModel)]="product.name">
+              </td>
+              <td *ngIf="productToBeEdited !== product.id">
+                  {{ product.description | slice:0:50 }}{{ product.description.length > 50 ? '...' : '' }}
+              </td>
+              <td *ngIf="productToBeEdited === product.id">
+                  <textarea [(ngModel)]="product.description"></textarea>
+              </td>
+              <td *ngIf="productToBeEdited !== product.id">
+                  {{ product.tags | slice:0:50 }}{{ product.tags.length > 50 ? '...' : '' }}
+              </td>
+              <td *ngIf="productToBeEdited === product.id">
+                  <textarea [(ngModel)]="product.tags"></textarea>
+              </td>
+              <td *ngIf="productToBeEdited !== product.id">
+                  {{ product.price | currency:'INR' }}
+              </td>
+              <td *ngIf="productToBeEdited === product.id">
+                  <input type="number" [(ngModel)]="product.price">
+              </td>
+              <td *ngIf="productToBeEdited !== product.id">
+                  {{ product.stock }}
+              </td>
+              <td *ngIf="productToBeEdited === product.id">
+                  <input type="number" [(ngModel)]="product.stock">
+              </td>
+              <td>
+                  <div *ngIf="productToBeEdited !== product.id">
+                      <button class="btn btn-primary btn-sm" (click)="editProduct(product.id)">Edit</button>
+                      <button class="btn btn-danger btn-sm" (click)="removeProduct(product.id)">Remove</button>
+                  </div>
+                  <div *ngIf="productToBeEdited === product.id">
+                      <button class="btn btn-success btn-sm" (click)="saveEdit(product)">Save</button>
+                      <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
+                  </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <div *ngIf="products.length === 0 && !loading && !error">No products found.</div>
+</div>

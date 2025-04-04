@@ -1,0 +1,35 @@
+<div class="order-list-container">
+    <h1>Orders</h1>
+    <div *ngIf="loading" class="loading-message">Loading orders...</div>
+    <div *ngIf="error" class="error-message">Error: {{ error }}</div>
+  
+    <div *ngIf="!loading && !error && orders.length > 0" class="orders-list">
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ (order.orderDate)}}</td>
+            <td>{{ order.orderTotal | currency }}</td>
+            <td>{{ order.orderStatus }}</td>
+            <td>
+              <button class="view-details-button" (click)="viewOrderDetails(order.id)">
+                View Details
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div *ngIf="!loading && !error && orders.length === 0" class="no-orders-message">
+      <p>No orders found.</p>
+    </div>
+  </div>

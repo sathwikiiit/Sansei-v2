@@ -1,0 +1,105 @@
+.admin-container {
+    display: flex;
+    height: 100vh;
+    /* Make the container take up the full viewport height */
+}
+
+.admin-sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.admin-sidebar nav ul li button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-sidebar nav ul li button:hover {
+    background-color: #ccc;
+}
+
+.admin-sidebar nav ul li button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.admin-header {
+    margin-bottom: 20px;
+}
+
+.json-upload-section,
+.json-preview-section,
+.submit-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.json-preview-section pre {
+    white-space: pre-wrap;
+    /* Preserve whitespace and wrap text */
+    max-height: 200px;
+    /* Add a max height for long JSON */
+    overflow-y: auto;
+    /* Enable scrolling if the content is too long */
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.submit-section button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-section button:hover {
+    background-color: #218838;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}

@@ -1,0 +1,78 @@
+.orders-container {
+    max-width: 1000px; /* Increased max-width for more space */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .orders-container h1 {
+    font-size: 28px; /* Increased font-size for heading */
+    margin-bottom: 25px; /* Increased margin-bottom */
+    text-align: center;
+    color: #333;
+  }
+  
+  .loading-message,
+  .error-message,
+  .no-orders-message {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px; /* Increased font-size for messages */
+    color: #555;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px; /* Increased margin-top */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;  /* Added for horizontal scrolling on small screens */
+  }
+  
+  .order-table thead tr {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .order-table th,
+  .order-table td {
+    padding: 15px; /* Increased padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-table th {
+    font-weight: bold;
+    font-size: 16px; /* Increased font-size for header */
+  }
+  
+  .order-table td {
+    font-size: 16px;  /* increased font size for data in table */
+  }
+  
+  .order-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .order-items-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-items-list li {
+    margin-bottom: 10px; /* Increased margin-bottom */
+    font-size: 16px; /* Increased font-size for list items */
+    color: #444;
+  }
+  

@@ -19,7 +19,7 @@ public class DbInit implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Specify the path to your JSON file here
-        String jsonFilePath = "static//products.json";
+        String jsonFilePath = "static/products.json";
         adminService.addProductsFromJson(jsonFilePath);
         apiUserService.createDefaultAdmin();
     }
